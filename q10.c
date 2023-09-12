@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
             A[i * N + j] = (i == j) ? 2.0 : 1.0;
         }
         b[i] = N + 1;
-        x[i] = 0.0;
+        x[i] = 1.2;
     }
 
     // Perform Jacobi iteration
