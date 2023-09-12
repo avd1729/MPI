@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-#define N 4 // Size of the linear system (change as needed)
+#define N 2 // Size of the linear system (change as needed)
 
 void jacobi(double *A, double *b, double *x, double *x_new, int local_n, int rank, int size)
 {
