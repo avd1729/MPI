@@ -1,0 +1,29 @@
+In graph theory, the chromatic polynomial of a graph is a polynomial function that counts the number of ways to color the vertices of the graph using a given number of colors, such that no two adjacent vertices have the same color.
+
+Formally, let G be a graph with n vertices. The chromatic polynomial of G, denoted by P(G, λ), is a function of the variable λ, defined as follows:
+
+P(G, λ) = k(k-1)(k-2)...(k-n+1),
+
+where k is the number of available colors and λ is a placeholder for k.
+
+The coefficient of λ^r in the chromatic polynomial P(G, λ) represents the number of ways to color the graph G using r colors. The value P(G, k) gives the total number of proper vertex colorings of G using k colors.
+
+The chromatic polynomial provides valuable information about the coloring properties of a graph. For example, the smallest positive integer k for which P(G, k) is nonzero is known as the chromatic number of G, denoted as χ(G). It represents the minimum number of colors required to properly color the vertices of the graph G.
+
+The study of chromatic polynomials helps analyze coloring problems, understand graph structures, and establish relationships between graphs based on their coloring properties.
+
+To derive the relation for the chromatic polynomial, we will use the concept of deletion-contraction. The deletion-contraction formula allows us to express the chromatic polynomial of a graph in terms of the chromatic polynomials of its subgraphs. Here's how we can derive the relation:
+
+Let G be a graph with n vertices and e edges. Consider an edge uv in G.
+
+1. Deletion: We first consider the graph obtained by deleting the edge uv from G, denoted as G - uv. The number of vertices in G - uv is still n, and the number of edges is e - 1.
+
+2. Contraction: We then consider the graph obtained by contracting the edge uv in G, denoted as G / uv. The edge uv is removed, and the vertices u and v are merged into a single vertex. The resulting graph has n - 1 vertices and e - 1 edges.
+
+Now, we can derive the relation for the chromatic polynomial using the deletion-contraction formula:
+
+P(G, λ) = P(G - uv, λ) - P(G / uv, λ).
+
+Intuitively, this formula states that the total number of colorings of G can be obtained by subtracting the number of colorings that result from deleting the edge uv (G - uv) from the number of colorings that result from contracting the edge uv (G / uv).
+
+Using this relation, we can recursively express the chromatic polynomial of a graph in terms of the chromatic polynomials of its subgraphs. This provides a useful tool for calculating the chromatic polynomial of a graph by breaking it down into smaller subgraphs and combining their chromatic polynomials.
